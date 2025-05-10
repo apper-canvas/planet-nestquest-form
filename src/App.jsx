@@ -48,7 +48,9 @@ function App() {
               animate={{ rotate: 0, scale: 1 }}
               className="text-accent mr-2"
             >
-              {getIcon("Home")({ size: 28 })}
+              {React.createElement(getIcon("Home"), {
+                size: 28
+              })}
             </motion.div>
             <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               NestQuest
@@ -69,9 +71,9 @@ function App() {
                 transition={{ duration: 0.2 }}
               >
                 {darkMode ? (
-                  <SunIcon size={20} className="text-yellow-300" />
+                  React.createElement(SunIcon, { size: 20, className: "text-yellow-300" })
                 ) : (
-                  <MoonIcon size={20} className="text-surface-600" />
+                  React.createElement(MoonIcon, { size: 20, className: "text-surface-600" })
                 )}
               </motion.div>
             </AnimatePresence>
