@@ -248,8 +248,8 @@ const Home = () => {
               description: "Connect with sellers or agents and make your dream home a reality."
             }
           ].map((step, index) => {
-            const StepIcon = getIcon(step.icon);
-            return (
+          ].map((step, index) => {
+            const StepIcon = getIcon(step.iconName);
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
